@@ -56,7 +56,7 @@ class Swiper extends Component {
 
                   return <Link to={{pathname:'/detail',search:`movieId=${item.id}`}}   key={index}>
                          <li  >
-                          <Badge text={item.r}  style={{  position: 'absolute' ,top:'-198px',left:'97px', padding: '0 3px', backgroundColor: '#f19736', borderRadius: 2 }} />
+                          <Badge text={item.r>0?item.r:''}  style={{  position: 'absolute' ,top:'-198px',left:'97px', padding: '0 3px', backgroundColor: '#f19736', borderRadius: 2 }} />
                           <img style={{width:'120px',height:'200px'}} src={item.img} alt={item.id} />
                         
                           <p style={{color:'#000'}}>{item.tCn}</p>

@@ -48,5 +48,18 @@ body {
   position: relative;
 
 }
+.new_sigle{
+  width: 100%;
+display: flex;
+justify-content: center;
+ 
+}
+.news_view{
+  width: 90%;
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
 /* 这里是解决antd使用轮播时控制台报警告问题 */
 * { touch-action: pan-y; }

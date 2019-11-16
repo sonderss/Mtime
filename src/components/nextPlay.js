@@ -10,7 +10,7 @@ class Nextplay extends Component {
     }
     componentDidMount(){
         getIsReady().then(res=>{
-            console.log(res.data.moviecomings)
+           
             var list = []
             for(let i=0;i<6;i++){
             list.push(res.data.moviecomings[i])
@@ -50,7 +50,7 @@ class Nextplay extends Component {
 
                   return <Link  to={{pathname:'/detail',search:`movieId=${item.id}`}} key={index}>
                          <li  >
-                          <Badge text={item.r}  style={{  position: 'absolute' ,top:'-198px',left:'97px', padding: '0 3px', backgroundColor: '#f19736', borderRadius: 2 }} />
+                          <Badge text={parseInt(item.r)>0?item.r:''}  style={{  position: 'absolute' ,top:'-198px',left:'97px', padding: '0 3px', backgroundColor: '#f19736', borderRadius: 2 }} />
                           <img style={{width:'120px',height:'200px'}} src={item.image} alt={item.id} />
                         
                           <p style={{color:'#000'}}>{item.title}</p>
