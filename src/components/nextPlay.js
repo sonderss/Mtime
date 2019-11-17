@@ -12,7 +12,7 @@ class Nextplay extends Component {
         getIsReady().then(res=>{
            
             var list = []
-            for(let i=0;i<6;i++){
+            for(let i=0;i<8;i++){
             list.push(res.data.moviecomings[i])
             }
             this.setState({

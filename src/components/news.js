@@ -5,7 +5,8 @@ class News extends Component {
     state = {
         data:[],
         time:[],
-        times:[]
+        times:[],
+        id:1
         
     }
     componentDidMount(){
@@ -89,30 +90,73 @@ class News extends Component {
            <div>
                 
                 <div className={'nowPlay'}>
-                    <div style={{display:'flex',alignItems: 'center'}}>
+                    <div style={{width:'95%',display:'flex',alignItems: 'center'}}>
                     <p >今日热点</p>
                     </div>
                 </div>
                 {/**'new_sigle' */}
-            {
-                this.state.data.map((item,index)=>{
-                    return  <div className={item.images.length === 1 ?'new_sigle':''  } key={index}>
-                                <div className={'news_view'} onClick={()=>this.newDetail(item.relatedId)}>
-                                  {/* <view style={{width:'200px',backgroundImage:`url(${item.images[0].imgUrl})`,backgroundSize: 'contain',  backgroundRepeat: 'no-repeat'}}> */}
-                                  <img style={{width:'150px',height:'100%'}} src={item.images[0].imgUrl} />
-                                  {/* </view> */}
-                                   
-                                    <div style={{display:'flex',flexDirection: 'column'}}>
-                                         <h2 style={{margin:'0',textAlign: 'start',padding:'0 10px'}}>{item.title}</h2>
-                                            <span style={{width:'100%',textAlign: 'start',padding:'20px 10px',color:'#ccc'}}>
-                                            {this.state.times[index]}
-                                            </span>
-                                    </div>
-                                    
+
+            
+              
+                {
+                    this.state.data.map((item,index)=>{
+                        return(
+                            item.images.length ===1 ?
+                            <div className={'new_sigle'} >
+                            <div className={'news_view'} onClick={()=>this.newDetail()}>
+                              <div style={{width:'100%',height:'150px',backgroundImage:`url(${item.images[0].imgUrl})`, backgroundSize: 'cover'}}>
+                              {/* <img style={{width:'100%',height:'100%'}} src={require('')} /> */}
+                              </div>
+                               
+                                <div style={{display:'flex',flexDirection: 'column',justifyContent: 'space-around'}}>
+                        <h3  style={{fontSize:'20px',fontWeight:550,margin:'0',textAlign: 'start',margin:'10px 0'}}>{item.title}</h3>
+                                        <span style={{width:'100%',textAlign: 'start',color:'#ccc'}}>
+                                        {this.state.times[index]}
+                                        </span>
                                 </div>
+                                
                             </div>
-                })
-            }
+            </div>
+            :
+            <div className={'news_double' } >
+                <div className={'news_double_view'}>
+                      
+                        <h3 style={{textAlign:'start',fontSize:'20px',margin:'10px 0'}}>{item.title}</h3>
+                    <div className={'img_view'} style={{margin:'10px 0 15px 0'}} >
+                        {/* <div  style={{width:'100px',height:'100px',backgroundImage:'url('+require('../assets/2.jpg')+')',backgroundSize: 'cover'}}></div>
+                        <div  style={{width:'100px',height:'100px',backgroundImage:'url('+require('../assets/2.jpg')+')',backgroundSize: 'cover'}}></div>
+                        <div  style={{width:'100px',height:'100px',backgroundImage:'url('+require('../assets/2.jpg')+')',backgroundSize: 'cover'}}></div> */}
+                        {
+                            item.images.map((a,b)=>{
+                                // eslint-disable-next-line no-unused-expressions   width:'100%',height:'100%',objectFit:'cover'
+                             return( <div style={{width:'9.5rem',height:'6.5rem'}}>
+                                    {/* <div  style={{width:'120px',height:'100px',backgroundImage:`url(${a.imgUrl})`,backgroundSize: 'cover',backgroundRepeat:' no-repeat', backgroundPosition:'center' }}></div> */}
+                                    <img  style={{width:'100%',height:'100%',objectFit:'cover'}} src={a.imgUrl}/>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    
+                    <span style={{textAlign:'start',display:'block',width:'100%',color:'#ccc'}}>
+                        {this.state.times[index]}
+                    </span>
+
+
+                </div>
+                
+            </div>
+                            
+                            
+                            
+                        )
+
+
+                    })
+                
+              
+              }
+            
                
             </div>
         )
