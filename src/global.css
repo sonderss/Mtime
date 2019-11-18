@@ -40,14 +40,18 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0;
+  justify-content:flex-start;
+  
+  margin-left: 4%;
+  margin-right: 10%;
   padding: 0;
+  
+  
 }
 .ul_list li{
   list-style: none;
   position: relative;
-
+  margin: 0 0.2rem;
 }
 .new_sigle{
   width: 100%;
@@ -81,6 +85,10 @@ flex-direction: column;
 .img_view{
   display: flex;
  justify-content: space-between;
+}
+.imgs_biew:nth-child(2){
+  margin-left: 20px;
+  margin-right: 20px;
 }
 /* 这里是解决antd使用轮播时控制台报警告问题 */
 * { touch-action: pan-y; }

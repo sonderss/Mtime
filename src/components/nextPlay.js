@@ -43,7 +43,7 @@ class Nextplay extends Component {
               <Icon type="right" size='md' onClick={()=>this.toMore()}/>
               </div>
             </div>
-            
+           
             <ul className={'ul_list'}>
 
                 {this.state.data.map((item,index)=>{
@@ -58,7 +58,7 @@ class Nextplay extends Component {
                         </Link>
                 })}
             </ul>
-              
+           
          </div>
         )
     }
