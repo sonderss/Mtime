@@ -2,6 +2,8 @@
 .normal {
   font-family: Georgia, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
@@ -12,4 +14,20 @@
   padding: .6em 0;
   color: white;
   margin: 0;
+}
+.btm_layout{
+  width: 100%;
+  height: 5rem;
+border-top: 0.01rem solid #ccc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: -.2rem;
+  padding: 0;
+  
+}
+.op{
+  font-size: 0.5rem;
+  color: #ccc;
+  
 }
