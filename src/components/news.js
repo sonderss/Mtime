@@ -5,8 +5,7 @@ class News extends Component {
     state = {
         data:[],
         time:[],
-        times:[],
-        id:1
+        times:[]
         
     }
     componentDidMount(){

@@ -38,20 +38,17 @@ body {
 }
 .ul_list{
   width: 100%;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content:flex-start;
-  
-  margin-left: 4%;
-  margin-right: 10%;
+  justify-content:space-around;
   padding: 0;
-  
-  
+
 }
 .ul_list li{
   list-style: none;
   position: relative;
-  margin: 0 0.2rem;
+ 
 }
 .new_sigle{
   width: 100%;
