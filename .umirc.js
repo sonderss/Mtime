@@ -9,7 +9,8 @@ export default {
       routes: [
         { path: '/', component: '../pages/index' },
         { path: '/movies', component: '../pages/movies' },
-        { path: '/detail', component: '../pages/detail' }
+        { path: '/detail', component: '../pages/detail' },
+        { path: '/newsdetail', component: '../pages/newsdetail' }
       ]
     }
     
