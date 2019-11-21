@@ -24,10 +24,12 @@ border-top: 0.01rem solid #ccc;
   flex-direction: column;
   margin-bottom: -.2rem;
   padding: 0;
-  
+
 }
 .op{
   font-size: 0.5rem;
   color: #ccc;
+
+ 
   
 }

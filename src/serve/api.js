@@ -58,8 +58,9 @@ export function news(){
     return axios.post('https://api.cat-shop.penkuoer.com/api/v2/proxy',{url:'https://content-api-m.mtime.cn/article/originalInfoList.api'})
 }
 
+//https://comm-api-m.mtime.cn/utility/share.api?type=116&relateId=10220119
 //新闻详情
 export function newsdetail(newsid){
-    return axios.post('https://api.cat-shop.penkuoer.com/api/v2/proxy',{url:'https://wemedia-m.mtime.cn/article/detail/'+newsid})
+    return axios.post('https://api.cat-shop.penkuoer.com/api/v2/proxy',{url:'https://comm-api-m.mtime.cn/utility/share.api?type=116&relateId='+newsid})
 }
 

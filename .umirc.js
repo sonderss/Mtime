@@ -10,7 +10,8 @@ export default {
         { path: '/', component: '../pages/index' },
         { path: '/movies', component: '../pages/movies' },
         { path: '/detail', component: '../pages/detail' },
-        { path: '/newsdetail', component: '../pages/newsdetail' }
+        { path: '/newsdetail', component: '../pages/newsdetail' },
+        { path: '/search', component: '../pages/search' }
       ]
     }
     

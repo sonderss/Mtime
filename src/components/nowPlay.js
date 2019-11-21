@@ -29,6 +29,10 @@ class Swiper extends Component {
      router.push('/movies?id=0')
 
     }
+    search(){
+      console.log('搜索')
+      router.push('/search')
+    }
     render() {
       return (
          <div>
@@ -36,7 +40,11 @@ class Swiper extends Component {
              <img style={{width:'80px',height:'80px',marginLeft:'15px'}} src={require('../assets/changan.jpg')} />
              <p style={{marginLeft:'15px'}}>长安酒馆电影室</p>
            </div>
-           
+           {/* 搜索 */}
+           <div className={'search'} onClick={()=>this.search()}>
+              <input type='text' placeholder='影院/影人/影片  任你搜' />
+           </div>
+         
             <div className={'nowPlay'}>
              <div style={{display:'flex',alignItems: 'center'}}>
                <p >正在热映</p>

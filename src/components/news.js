@@ -127,7 +127,7 @@ class News extends Component {
                 <div className={'news_double' } >
                     <div className={'news_double_view'} onClick={()=>this.newDetail(item.relatedId)}>
                         
-                            <h3 style={{textAlign:'start',fontSize:'20px',margin:'10px 0'}}>{item.title}</h3>
+                            <h3 style={{textAlign:'start',fontSize:'20px',margin:'10px 0',color:'#000'}}>{item.title}</h3>
                         <div className={'img_view'} style={{margin:'10px 0 15px 0'}} >
                             {/* <div  style={{width:'100px',height:'100px',backgroundImage:'url('+require('../assets/2.jpg')+')',backgroundSize: 'cover'}}></div>
                             <div  style={{width:'100px',height:'100px',backgroundImage:'url('+require('../assets/2.jpg')+')',backgroundSize: 'cover'}}></div>
@@ -157,11 +157,8 @@ class News extends Component {
 
 
                     })
-                
-              
+
               }
-            
-               
             </div>
         )
     }

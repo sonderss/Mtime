@@ -5,7 +5,7 @@ function BasicLayout(props) {
     <div className={styles.normal}>
      
       {props.children}
-      <p className={styles.op}>没有更多了~</p>
+      {/* <p className={styles.op}>没有更多了~</p>
       <div className={styles.btm_layout}>
         
         <div style={{marginTop:'0.5rem',padding:'0',display:'flex',alignItems:'center',justifyContent:'center'}}>
@@ -19,7 +19,7 @@ function BasicLayout(props) {
          <p>特别感谢MTime时光网，此电影室不做任何商业用途</p>
         </div>
         
-      </div>
+      </div> */}
     </div>
   );
 }
